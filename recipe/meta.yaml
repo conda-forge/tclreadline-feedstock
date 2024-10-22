@@ -1,5 +1,5 @@
 {% set name = "tclreadline" %}
-{% set version = "2.3.8" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/flightaware/tclreadline/archive/v{{ version }}.tar.gz
-  sha256: a64e0faed5957b8e1ac16f179948e21cdd6d3b8313590b7ab049a3192ab864fb
+  sha256: 306f9a72ef3ad9ff7a8549f1c616edef5365b98bce7e62fdde6e595355c0faee
 
 build:
   number: 0
@@ -16,6 +16,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - make
   host:
